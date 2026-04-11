@@ -223,3 +223,438 @@ footer a:hover{
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
+
+.mesrealisations {
+    width: 800px;
+    margin: 6rem auto;
+    text-align: center;
+}
+
+section h2{
+    color: var(--violet-doux);
+    font-size: 2.6rem;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+}
+
+section h2::after{
+    content: '';
+    width: 60px;
+    height: 4px;
+    display: block;
+    margin: 1.2rem auto;
+    border-radius: 2px;
+    background-color: var(--violet-doux);
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 6rem auto;
+    padding: 0 2rem;
+}
+
+.contact-content {
+    display: flex;
+    gap: 4rem;
+    margin-top: 3rem;
+    align-items: flex-start;
+}
+
+.contact-form {
+    flex: 1;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    color: var(--gris-tres-fonce);
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: inherit;
+    outline-color: var(--violet-doux);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+}
+
+.contact-info {
+    flex: 1;
+    text-align: left;
+}
+
+.contact-info h3 {
+    color: var(--violet-doux);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--gris-fonce);
+}
+
+.social-contact {
+    margin-top: 2rem;
+}
+
+.social-contact a {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: var(--violet-doux);
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.social-contact a i {
+    margin-right: 10px;
+    font-size: 1.4rem;
+}
+
+.social-contact a:hover {
+    background: var(--violet-doux);
+    color: white;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .contact-container {
+        margin: 3rem auto;
+    }
+}
+
+/* --- PAGE PROJETS : GRILLE 3 COLONNES --- */
+
+.projets-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 20px;
+}
+
+.projet-card {
+    background-color: white;
+    /* Calcul : (100% / 3) - compensation du gap */
+    flex: 1 1 calc(33.333% - 1.4rem); 
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet de lévitation au survol */
+.projet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(108, 99, 255, 0.2);
+}
+
+/* Gestion des images pour qu'elles soient uniformes */
+.projet-img img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* Important : remplit l'espace sans déformer */
+    display: block;
+    border-bottom: 3px solid var(--violet-doux);
+}
+
+.projet-info {
+    padding: 1.5rem;
+    flex-grow: 1; /* Pousse le footer vers le bas */
+    display: flex;
+    flex-direction: column;
+}
+
+.projet-info h3 {
+    color: var(--violet-doux);
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.projet-info p {
+    color: var(--gris-fonce);
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.tags {
+    margin-bottom: 1.5rem;
+}
+
+.tags span {
+    background: var(--gris-tres-clair);
+    color: var(--violet-doux);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-right: 5px;
+    border: 1px solid var(--gris-clair);
+}
+
+.projet-info .icons {
+    margin-top: auto; /* Aligne les icônes en bas de la carte */
+    padding-top: 1rem;
+    border-top: 1px solid var(--gris-clair);
+    display: flex;
+    justify-content: space-between;
+}
+
+.projet-info .icons a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.projet-info .icons a i {
+    color: var(--violet-doux);
+    margin-right: 5px;
+}
+
+.projet-info .icons a:hover {
+    color: var(--violet-doux);
+}
+
+/* --- RESPONSIVE --- */
+
+/* Tablettes : 2 par ligne */
+@media (max-width: 992px) {
+    .projet-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+}
+
+/* Mobiles : 1 par ligne */
+@media (max-width: 600px) {
+    .projet-card {
+        flex: 1 1 100%;
+    }
+    .projets-container {
+        margin: 2rem auto;
+    }
+}
+
+.passion-icon-header {
+    background-color: var(--gris-tres-clair);
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--violet-doux);
+    transition: background-color 0.3s ease;
+}
+
+.passion-icon-header i {
+    font-size: 5rem;
+    color: var(--violet-doux);
+    transition: transform 0.3s ease;
+}
+
+.projet-card {
+    background-color: white;
+    /* On s'assure que la carte prend 1/3 de la largeur moins le gap */
+    flex: 1 1 calc(33.333% - 1.4rem); 
+    
+    /* FORCE LA HAUTEUR ÉGALE */
+    display: flex;
+    flex-direction: column;
+    
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projet-info {
+    padding: 1.5rem;
+    /* Pousse tout le contenu interne pour remplir la carte */
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.projet-info p {
+    color: var(--gris-fonce);
+    font-size: 1rem;
+    line-height: 1.5;
+    /* Permet au paragraphe de prendre l'espace nécessaire */
+    flex-grow: 1; 
+    margin-bottom: 1.2rem;
+}
+
+/* --- PAGE DIVERTISSEMENT : DESIGN HORIZONTAL ALTERNÉ --- */
+
+.divertissement-section {
+    padding: 4rem 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.header-content h2 {
+    color: var(--violet-doux);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.divertissement-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem; /* Espace entre les cartes horizontales */
+}
+
+.div-card {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 25px; /* Coins plus arrondis */
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.4s ease;
+    min-height: 300px;
+}
+
+/* Taille fixe pour la zone image */
+/* --- OPTIMISATION RESPONSIVE DES IMAGES --- */
+
+.div-img {
+    flex: 1;
+    /* On force une hauteur minimale pour que l'image soit visible même si le texte est court */
+    align-self: stretch; 
+    overflow: hidden;
+    position: relative;
+}
+
+.div-img img {
+    width: 100%;
+    height: 100%;
+    /* Le secret du responsive : 
+       'cover' centre et coupe l'image pour remplir le cadre sans l'écraser 
+    */
+    object-fit: cover; 
+    display: block;
+    /* Optionnel : ajoute une légère transition au survol pour le style */
+    transition: transform 0.5s ease;
+}
+
+/* Effet zoom sur l'image quand on survole la carte */
+.div-card:hover .div-img img {
+    transform: scale(1.1);
+}
+
+/* Zone texte */
+.div-text {
+    flex: 1.2;
+    padding: 3rem;
+}
+
+.div-text h3 {
+    color: var(--violet-doux);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Petite barre de décoration sous le titre */
+.div-text h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--violet-doux);
+    border-radius: 2px;
+}
+
+.div-text p {
+    color: var(--gris-fonce);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* --- LOGIQUE D'ALTERNANCE (L'INVERSION) --- */
+
+/* Pour toutes les cartes paires (2, 4, etc.) */
+.div-card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Ajustement de la barre de titre pour les cartes inversées (optionnel) */
+.div-card:nth-child(even) .div-text h3::after {
+    left: auto;
+    right: 0;
+}
+
+.div-card:nth-child(even) .div-text {
+    text-align: right;
+}
+
+/* --- RESPONSIVE (Passage en vertical sur mobile) --- */
+
+@media (max-width: 850px) {
+    .div-card, .div-card:nth-child(even) {
+        flex-direction: column; /* On remet tout en vertical sur mobile */
+        text-align: left;
+    }
+    
+    .div-card:nth-child(even) .div-text h3::after {
+        right: auto;
+        left: 0;
+    }
+
+    .div-img {
+        width: 100%;
+        height: 250px;
+    }
+}
